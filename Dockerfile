@@ -6,3 +6,7 @@ COPY vhosts /usr/local/apache2/vhosts
 COPY conf/auth /usr/local/apache2/auth
 
 RUN echo 'alias ll="ls -FAlp"' >> ~/.bashrc
+
+RUN apk add --update \
+    sqlite \
+    apr-util-dbd_sqlite3

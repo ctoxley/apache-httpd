@@ -24,6 +24,7 @@ vi /etc/hosts
     127.0.0.1       www.site1.domain.co.uk site1.domain.co.uk 
     127.0.0.1       www.site2.domain.co.uk site2.domain.co.uk 
     127.0.0.1       www.site3.domain.co.uk site3.domain.co.uk
+    127.0.0.1       www.site4.domain.co.uk site4.domain.co.uk
     ...
 
 The following URLs should be valid:
@@ -31,6 +32,7 @@ The following URLs should be valid:
   - http://www.site1.domain.co.uk:8080
   - http://www.site2.domain.co.uk:8080
   - http://www.site3.domain.co.uk:8080
+  - http://www.site4.domain.co.uk:8080
 
 ### Inside the container
 
