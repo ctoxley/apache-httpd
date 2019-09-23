@@ -20,13 +20,13 @@
 vi /etc/hosts
 
     ...
-    127.0.0.1	    localhost
+    127.0.0.1       localhost 
     127.0.0.1       www.site1.domain.co.uk site1.domain.co.uk 
     127.0.0.1       www.site2.domain.co.uk site2.domain.co.uk 
     127.0.0.1       www.site3.domain.co.uk site3.domain.co.uk
     ...
 
-The following URLs should valid:
+The following URLs should be valid:
 
   - http://www.site1.domain.co.uk:8080
   - http://www.site2.domain.co.uk:8080
@@ -41,6 +41,14 @@ Apache home: /usr/local/apache2
 ### Apache 2 configuration
 
 Listen -> https://httpd.apache.org/docs/current/bind.html
+
+Password file creation:
+
+    $ htpasswd -c conf/auth/passwords user2
+
+Add a user password:
+
+    $ htpasswd conf/auth/passwords user3
 
 ### Clean up
 
