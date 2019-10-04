@@ -42,6 +42,22 @@ Apache home: /usr/local/apache2
 
 ### Apache 2 configuration
 
+ServerName localhost:80
+
+Include conf/extra/httpd-vhosts.conf
+
+Extra loaded modules:
+
+DB
+
+    LoadModule authn_dbd_module modules/mod_authn_dbd.so
+    LoadModule dbd_module modules/mod_dbd.so
+
+Proxy
+
+    LoadModule proxy_module modules/mod_proxy.
+    LoadModule proxy_http_module modules/mod_proxy_http.so
+
 Listen -> https://httpd.apache.org/docs/current/bind.html
 
 Password file creation:
