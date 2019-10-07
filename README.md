@@ -4,8 +4,8 @@
 ### Docker
 
     $ docker build -t httpd-playground .
-    $ docker run -dit -p 8080:80 httpd-playground
-    $ docker run --rm -p 8080:80 httpd-playground
+    $ docker run --name httpd-instance -dit -p 8080:80 httpd-playground
+    $ docker run --name httpd-instance --rm -p 8080:80 httpd-playground
 
 ** docker run: _-d : To start a container in detached mode_
 
@@ -30,13 +30,15 @@ vi /etc/hosts
 The following URLs should be valid:
 
   - http://www.site1.domain.co.uk:8080
-  - http://www.site2.domain.co.uk:8080
-  - http://www.site3.domain.co.uk:8080
-  - http://www.site4.domain.co.uk:8080
+  - http://www.site2.domain.co.uk:8080 (Basic Auth Applied)
+  - http://www.site3.domain.co.uk:8080 (Basic Auth Applied)
+  - http://www.site4.domain.co.uk:8080 (Basic Auth Applied)
+  - http://www.site5.domain.co.uk:8080
+  - http://www.site6.domain.co.uk:8080
 
 ### Inside the container
 
-    $ docker exec -it $1 /bin/bash
+    $ docker exec -it httpd-instance /bin/bash
 
 Apache home: /usr/local/apache2
 
