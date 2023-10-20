@@ -1,6 +1,8 @@
 
 # Apache 2 Playground
 
+Experimentation.
+
 ### Docker
 
     $ docker build -t httpd-playground .
